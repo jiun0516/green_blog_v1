@@ -12,8 +12,8 @@
 				<label for="">password : </label> 
 				<input type="password" name="password" id="password" class="form-control" value="1234">
 			</div>
-			<button type="submit" class="btn btn-primary">로그인</button>
+			<button type="button" id="btn--login" class="btn btn-primary">로그인</button>
 		</form>
 	</div>
-	
+<script src="/js/user.js"></script>
 <%@ include file="../layout/footer.jsp" %>
