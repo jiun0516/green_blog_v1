@@ -7,11 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 
+import lombok.Data;
+
 @Entity
+@Data // 주의! (Object Mapper) 파싱처리할때 setter 반드시 있어야 한다.
 public class User {
 	
 	@Id
@@ -20,9 +24,11 @@ public class User {
 	@Column(nullable = false, length = 30)
 	private String username;
 	
+	@NotBlank // null, "" - 빈문자열, 잡겠다
 	@Column(nullable = false, length = 100)
 	private String password;
 	
+	@NotBlank
 	@Column(nullable = false, length = 50)
 	private String email;
 
