@@ -52,6 +52,7 @@ let index = {
 			alert("로그인 완료 되었습니다.");
 			location.href="/";
 		}).fail(function(error) {
+			console.log(error);
 			alert("로그인에 실패 하였습니다");
 		});
 	}

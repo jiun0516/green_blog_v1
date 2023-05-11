@@ -3,7 +3,7 @@
 <%@ include file="../layout/header.jsp" %>
 
 	<div class="container">
-		<form action="#" method="post">
+		<form action="/auth/loginProc" method="post">
 			<div class="form-group">
 				<label for="">username : </label> 
 				<input type="text" name="username" id="username" class="form-control" value="아톰">
@@ -12,8 +12,9 @@
 				<label for="">password : </label> 
 				<input type="password" name="password" id="password" class="form-control" value="1234">
 			</div>
-			<button type="button" id="btn--login" class="btn btn-primary">로그인</button>
+			<button type="submit" id="btn--login" class="btn btn-primary">로그인</button>
 		</form>
 	</div>
-<script src="/js/user.js"></script>
+<!-- 시큐리티 적용으로 form 태그 사용 결정  -->
+<!-- <script src="/js/user.js"></script> -->
 <%@ include file="../layout/footer.jsp" %>
